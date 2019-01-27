@@ -12,8 +12,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/ramda": "^0.25.47",
     "micro": "^9.3.3",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "ramda": "^0.26.1"
   },
   "devDependencies": {
     "@types/jest": "^23.3.12",
