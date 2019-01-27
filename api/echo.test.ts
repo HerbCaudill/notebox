@@ -1,20 +1,25 @@
 const { echo } = require('./echo')
 const { inject } = require('shot')
-const listen = require('test-listen')
 
 const data = {
   foo: 'pizza',
 }
 
 describe('/echo', () => {
-  it('responds', async () => {
+  let res: any
+
+  beforeEach(async () => {
     const req = {
       method: 'get',
       url: '/',
       payload: data,
     }
-    const res = await inject(echo, req)
+    res = await inject(echo, req)
+  })
+  it('responds', () => {
     expect(res.statusCode).toEqual(200)
+  })
+  it('returns the original payload', () => {
     expect(JSON.parse(res.payload)).toEqual(data)
   })
 })
