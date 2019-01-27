@@ -15,7 +15,7 @@ export const validate = (d: any): Card => {
     throw new Error('Card must have a `url` property, containing a reference to the source publication.')
 
   // Pull any optionalFields fields, if present (missing fields are ignored)
-  const optionalFields = R.pick(['url', 'quote_url', 'author', 'quote', 'comment'], d)
+  const optionalFields = R.pick(['quote_url', 'author', 'quote', 'comment'], d)
 
   return {
     url: d.url,
