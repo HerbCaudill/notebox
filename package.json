@@ -12,10 +12,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "micro": "^9.3.3",
     "node-fetch": "^2.3.0"
   },
   "devDependencies": {
     "@types/jest": "^23.3.12",
+    "@types/micro": "^7.3.3",
     "@types/node-fetch": "^2.1.4",
     "@types/shot": "^4.0.0",
     "jest": "^23.6.0",
