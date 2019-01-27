@@ -1,0 +1,29 @@
+{
+  "name": "notebox",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec \"ts-node $1\"",
+    "pretest": "tsc --noemit",
+    "test": "jest",
+    "commit": "git add -A && git commit -m \"TCR $(date \"+%c\")\";",
+    "revert": "git reset --hard",
+    "tcr": "yarn test && yarn commit || yarn revert"
+  },
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.1.4",
+    "@types/jest": "^23.3.12",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.3",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1",
+    "nodemon": "^1.18.9",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.2"
+  }
+}

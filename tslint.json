@@ -1,0 +1,13 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "curly": false,
+    "variable-name": [true, "check-format", "allow-leading-underscore"],
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": false,
+    "interface-name": false,
+    "no-object-literal-type-assertion": false,
+    "no-var-requires": false,
+    "object-literal-sort-keys": false
+  }
+}

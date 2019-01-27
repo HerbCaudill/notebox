@@ -1,4 +1,18 @@
 {
   "version": 2,
-  "builds": [{ "src": "collect.js", "use": "@now/node" }]
+  "builds": [
+    {
+      "src": "./src/**/*.ts",
+      "use": "@now/node@canary"
+    }
+  ],
+  "env": {
+    "IS_NOW": "true"
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ]
 }
