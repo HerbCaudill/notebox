@@ -10,16 +10,16 @@ export interface Card {
 }
 
 export const validate = (d: any): Card => {
-  // Check for required field
+  // Check for required fields
   if (!d.hasOwnProperty('url'))
     throw new Error('Card must have a `url` property, containing a reference to the source publication.')
 
-  // Pull any optional fields, if present (missing fields are ignored)
-  const optional = R.pick(['url', 'quote_url', 'author', 'quote', 'comment'], d)
+  // Pull any optionalFields fields, if present (missing fields are ignored)
+  const optionalFields = R.pick(['url', 'quote_url', 'author', 'quote', 'comment'], d)
 
   return {
     url: d.url,
-    ...optional,
+    ...optionalFields,
     timestamp: new Date(),
   }
 }
